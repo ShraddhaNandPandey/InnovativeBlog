@@ -1,0 +1,67 @@
+/* logo.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* Light and Dark Mode Colors */
+:root {
+  --logo-color-light: #2664eb; /* Logo color for light mode */
+  --logo-color-dark: #f4f4f9; /* Logo color for dark mode */
+  --logo-bg-light: transparent; /* Background color for light mode */
+  --logo-bg-dark: #212121;
+ /* Background color for dark mode */
+  --logo-shadow-light: rgba(0, 0, 0, 0.3); /* Text shadow color for light mode */
+  --logo-shadow-dark: rgba(255, 255, 255, 0.3); /* Text shadow color for dark mode */
+}
+
+[data-theme="dark"] {
+  --logo-color: var(--logo-color-dark);
+  --logo-bg: var(--logo-bg-dark);
+  --logo-shadow: var(--logo-shadow-dark);
+}
+
+:root {
+  --logo-color: var(--logo-color-light);
+  --logo-bg: var(--logo-bg-light);
+  --logo-shadow: var(--logo-shadow-light);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--background-color);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--logo-bg); /* Matches background color */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--logo-color); /* Logo color */
+  text-decoration: none;
+  text-shadow: 1px 1px 3px var(--logo-shadow); /* Text shadow effect */
+  font-family: 'Roboto', sans-serif; /* Applying the different font style */
+}
+
+.logo-icon {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}

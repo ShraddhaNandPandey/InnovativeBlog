@@ -1,0 +1,311 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Default styles for small screens (mobile) */
+main {
+  padding: 15px;
+  max-width: 1080px; /* Full width on smaller screens */
+  margin: 0 auto;
+}
+
+/* For medium screens (tablets, small desktops) */
+@media screen and (min-width: 600px) {
+  main {
+    padding: 20px;
+    max-width: 100%; /* Adjusted width for medium screens */
+  }
+}
+
+/* For large screens (desktops) */
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 20px;
+    max-width: 960px; /* Standard width for larger screens */
+  }
+}
+
+/* For extra-large screens (wide desktops) */
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 20px;
+    max-width: 1200px; /* Wider max-width for extra-large screens */
+  }
+}
+
+/* Responsive header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto 50px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 100%; /* Full width on smaller screens */
+}
+
+/* For medium screens (tablets, small desktops) */
+@media screen and (min-width: 600px) {
+  header {
+    max-width: 90%; /* Adjusted width for medium screens */
+  }
+}
+
+/* For larger screens (desktops) */
+@media screen and (min-width: 1024px) {
+  header {
+    max-width: 1200px; /* Adjusted width for larger screens */
+  }
+}
+
+/* For extra-large screens (wide desktops) */
+@media screen and (min-width: 1440px) {
+  header {
+    max-width: 1400px; /* Adjusted width for extra-large screens */
+  }
+}
+
+header a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--logo-color);
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a.logout-btn {
+  color: var(--logout-color);
+  font-weight: bold;
+}
+
+header nav a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Mode Toggle Button */
+.mode-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--button-color);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Post styles */
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  div.post {
+    grid-template-columns: .9fr 1.1fr;
+  }
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info {
+  margin: 24px 0;
+  color: var(--info-color);
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+div.post p.info a.author {
+  color: var(--text-color);
+}
+
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.8rem;
+}
+
+/* Form styles */
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--input-border-color);
+  border-radius: 5px;
+  background-color: var(--input-bg-color);
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  background-color: var(--button-bg-color);
+  border: 0;
+  color: var(--button-text-color);
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+form.login h1,
+form.register h1 {
+  text-align: center;
+}
+
+/* Post page styles */
+div.post-page div.image {
+  max-height: 300px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 1rem;
+  color: var(--time-color);
+  margin: 10px 0;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+div.content p {
+  line-height: 1.7rem;
+  margin: 30px 0;
+}
+
+div.content li {
+  margin-bottom: 10px;
+}
+
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+  background-color: var(--button-bg-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--button-text-color);
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a svg {
+  height: 20px;
+}
+
+/* Dark Mode Styles */
+:root {
+  --background-color: #f4f4f9;
+  --text-color: #222;
+  --link-color: #333;
+  --link-hover-color: #007bff;
+  --logo-color: #555;
+  --border-color: #ddd;
+  --info-color: #888;
+  --input-border-color: #ddd;
+  --input-bg-color: #fff;
+  --button-bg-color: #555;
+  --button-text-color: #fff;
+  --button-color: #555;
+  --logout-color: #d9534f;
+  --time-color: #aaa;
+}
+
+[data-theme="dark"] {
+  --background-color: #222;
+  --text-color: #f4f4f9;
+  --link-color: #f4f4f9;
+  --link-hover-color: #5a99d4;
+  --logo-color: #f4f4f9;
+  --border-color: #444;
+  --info-color: #bbb;
+  --input-border-color: #555;
+  --input-bg-color: #333;
+  --button-bg-color: #444;
+  --button-text-color: #f4f4f9;
+  --button-color: #f4f4f9;
+  --logout-color: #ff6b6b;
+  --time-color: #aaa;
+}
+
+
+.mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 0; /* Ensure no extra padding around the SVG */
+}
+
+.mode-icon {
+  height: 24px; /* Adjust the size as needed */
+  width: 24px;
+}
